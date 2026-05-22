@@ -1,5 +1,7 @@
 /* Google Web Font Import */
 @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Playwrite+AR+Guides&display=swap');
+@import url(https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet);
+
 
 /* Reset 및 기본 설정 */
 * {
@@ -84,6 +86,19 @@ header ul li a {
     font-weight: 900;
 }
 
+/* 콘텐츠 영역 내의 특정 span(Conte de Tulear) 스타일 */
+.content .textBox h2 span {
+    color: #7a5608;
+    font-size: 1.2em;
+    font-weight: 700; /* Garamond는 너무 두꺼운 것보다 적당한 게 예뻐요 */
+
+    /* 여기에 불러온 폰트 이름을 넣습니다 */
+    font-family: 'Cormorant Garamond', serif; 
+    
+    /* 팁: 영문 폰트는 한 줄로 나오게 하는 게 예뻐서 아래 코드를 추천해요 */
+    display: block; 
+}
+
 /* 예약하기 버튼 */
 .content .textBox a {
     display: inline-block;
@@ -99,16 +114,16 @@ header ul li a {
 
 /* 이미지 박스 */
 .content .imgBox {
-    width: 600px;
-    background-color: skyblue; /* 테스트용 배경색 */
+    flex: 1;         
     display: flex;
-    justify-content: flex-end;
-    padding-right: 50px;
+    justify-content: flex-end; 
+    align-items: center;
+    padding-right: 0; 
     margin-top: 50px;
 }
 
 .content .imgBox img {
-    max-width: 340px;
+    max-width: 550px;
 }
 
 /* 하단 썸네일 리스트 */
