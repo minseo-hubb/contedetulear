@@ -123,7 +123,7 @@ header ul li a {
 }
 
 .content .imgBox img {
-    max-width: 550px;
+    max-width: 1000px;
 }
 
 /* 하단 썸네일 리스트 */
@@ -145,14 +145,6 @@ header ul li a {
     cursor: pointer;
 }
 
-/* 소셜 미디어 아이콘 (CSS 누락분 추가 제안) */
-.sci {
-    position: absolute;
-    right: 30px;
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-}
 
 .sci li a img {
     max
