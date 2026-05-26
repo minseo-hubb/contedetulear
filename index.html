@@ -3,14 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brunch Landing Page</title>
-    
+    <title>Conte de Tulear</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <section>
-        <div class="circle"></div>
-
         <header>
             <a href="#" class="logo">
                 <img src="./tul.jpg" alt="Brunch Logo">
@@ -26,30 +23,38 @@
         <div class="content">
             <div class="textBox">
                 <h2>BREAKFAST AND LUNCH<br> <span>Conte de Tulear</span></h2>
-                <p>서울시 강남구 도산대로 49길 39</p>
-                <a href="https://www.catchtable.net/shop/contedetulear">예약하기</a>
+                
+                <div class="menu-info">
+                    <h3 id="menu-title">김치볶음밥</h3>
+                    <p id="menu-desc">메뉴1입니다.</p>
+                </div>
+
+                <p class="address">서울시 강남구 도산대로 49길 39</p>
+                <a href="https://www.catchtable.net/shop/contedetulear" class="btn">예약하기</a>
             </div>
 
             <div class="imgBox">
-                <img src="./김치볶음밥.png" class="main-img" alt="Main Brunch Image">
+                <img src="./김치볶음밥.png" class="main-img" alt="Main Dish">
             </div>
         </div>
 
         <ul class="thumb">
-            <li><img src="./김치볶음밥.png" onclick="slider('./김치볶음밥.png')"></li>
-            <li><img src="./로제파스타.png" onclick="slider('./로제파스타.png')"></li>
-            <li><img src="./피쉬앤칩스.png" onclick="slider('./피쉬앤칩스.png')"></li>
-            <li><img src="./솔티드 캬라멜 빙수.png" onclick="slider('./솔티드 캬라멜 빙수.png')"></li>
+            <li><img src="./김치볶음밥.png" onclick="slider('./김치볶음밥.png', '김치볶음밥', '메뉴1입니다.')"></li>
+            <li><img src="./로제파스타.png" onclick="slider('./로제파스타.png', '로제파스타', '메뉴2입니다.')"></li>
+            <li><img src="./피쉬앤칩스.png" onclick="slider('./피쉬앤칩스.png', '피쉬앤칩스', '메뉴3입니다.')"></li>
+            <li><img src="./솔티드 캬라멜 빙수.png" onclick="slider('./솔티드 캬라멜 빙수.png', '솔티드 캬라멜 빙수', '메뉴4입니다.')"></li>
         </ul>
     </section>
 
     <script>
-        function slider(path) {
+        function slider(path, title, desc) {
+            // 이미지 교체
             document.querySelector('.main-img').src = path;
+            // 제목 교체
+            document.getElementById('menu-title').innerText = title;
+            // 설명 교체
+            document.getElementById('menu-desc').innerText = desc;
         }
     </script>
 </body>
 </html>
-
-
-

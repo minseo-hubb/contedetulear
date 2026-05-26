@@ -1,9 +1,5 @@
-/* Google Web Font Import */
-@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Playwrite+AR+Guides&display=swap');
-@import url(https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet);
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Noto+Sans+KR:wght@300;500;900&display=swap');
 
-
-/* Reset 및 기본 설정 */
 * {
     margin: 0;
     padding: 0;
@@ -11,21 +7,17 @@
     font-family: "Noto Sans KR", sans-serif; 
 }
 
-/* 메인 섹션 레이아웃 */
 section {
     position: relative;
-    width: 100%;             /* 반응형을 위해 1600px에서 100%로 수정 권장 */
-    max-width: 1600px;       /* 최대 너비 제한 */
-    margin: 0 auto;
+    width: 100%;
     min-height: 100vh;
-    background-color: ivory;
     padding: 100px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    background-color: ivory;
 }
 
-/* 헤더 네비게이션 */
 header {
     position: absolute;
     top: 0;
@@ -37,13 +29,11 @@ header {
     align-items: center;
 }
 
-header .logo {
-    position: relative;
+header .logo img {
     max-width: 80px;
 }
 
 header ul {
-    position: relative;
     display: flex;
 }
 
@@ -52,13 +42,12 @@ header ul li {
 }
 
 header ul li a {
-    display: inline-block;
     color: #333;
-    margin-left: 40px;
+    font-weight: 500;
     text-decoration: none;
+    margin-left: 40px;
 }
 
-/* 콘텐츠 영역 */
 .content {
     position: relative;
     width: 100%;
@@ -67,84 +56,92 @@ header ul li a {
     align-items: center;
 }
 
-/* 텍스트 박스 스타일링 */
-.content .textBox {
+.textBox {
     position: relative;
+    flex: 1;
     max-width: 600px;
 }
 
-.content .textBox h2 {
+.textBox h2 {
     color: #333;
     font-size: 4em;
-    line-height: 1.4em;
-    font-weight: 500;
+    line-height: 1.2em;
 }
 
-.content .textBox h2 span {
+.textBox h2 span {
     color: #7a5608;
     font-size: 1.2em;
-    font-weight: 900;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    display: block;
 }
 
-/* 콘텐츠 영역 내의 특정 span(Conte de Tulear) 스타일 */
-.content .textBox h2 span {
-    color: #7a5608;
-    font-size: 1.2em;
-    font-weight: 700; /* Garamond는 너무 두꺼운 것보다 적당한 게 예뻐요 */
-
-    /* 여기에 불러온 폰트 이름을 넣습니다 */
-    font-family: 'Cormorant Garamond', serif; 
-    
-    /* 팁: 영문 폰트는 한 줄로 나오게 하는 게 예뻐서 아래 코드를 추천해요 */
-    display: block; 
+/* 메뉴 정보 스타일 */
+.menu-detail {
+    margin: 30px 0;
 }
 
-/* 예약하기 버튼 */
-.content .textBox a {
+#menu-title {
+    font-size: 2.2em;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+#menu-desc {
+    font-size: 1.3em;
+    color: #666;
+}
+
+.address {
+    margin-top: 10px;
+    color: #333;
+}
+
+.btn {
     display: inline-block;
-    margin-top: 20px;
-    padding: 8px 20px;
+    margin-top: 25px;
+    padding: 10px 30px;
     background: #7a5608;
     color: #fff;
     border-radius: 40px;
-    font-weight: 500;
-    letter-spacing: 1px;
     text-decoration: none;
+    font-weight: 500;
 }
 
-/* 이미지 박스 */
-.content .imgBox {
-    flex: 1;         
+/* 이미지 박스 크기 조절 */
+.imgBox {
+    flex: 1.2;
     display: flex;
-    justify-content: flex-end; 
+    justify-content: center;
     align-items: center;
-    padding-right: 0; 
-    margin-top: 50px;
 }
 
-.content .imgBox img {
-    max-width: 1000px;
+.imgBox img {
+    width: 100%;
+    max-width: 750px; /* 이미지가 더 크게 나오도록 수정 */
+    height: auto;
+    filter: drop-shadow(10px 15px 25px rgba(0,0,0,0.1));
 }
 
-/* 하단 썸네일 리스트 */
 .thumb {
     position: absolute;
     left: 50%;
     bottom: 20px;
-    display: flex;
     transform: translateX(-50%);
-    list-style: none;
+    display: flex;
 }
 
 .thumb li {
-    margin: 0 10px;
+    list-style: none;
+    margin: 0 15px;
 }
 
 .thumb li img {
-    max-width: 60px; /* 썸네일 크기 적정화 */
+    width: 70px;
     cursor: pointer;
+    transition: 0.3s;
 }
 
-
-.sci li a img {
-    max
+.thumb li img:hover {
+    transform: translateY(-10px);
+}
