@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
     <section>
         <div class="circle"></div>
 
@@ -19,7 +18,7 @@
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="https://www.catchtable.net/shop/contedetulear/menus">Menu</a></li>
-                <li><a href="https://www.google.com/maps/search/서울시+강남구+도산대로+49길+39">Location</a></li>
+                <li><a href="#">Location</a></li>
                 <li><a href="https://contedetulear.com/">Perfume</a></li>
             </ul>
         </header>
@@ -32,27 +31,33 @@
             </div>
 
             <div class="imgBox">
-                <img src="./Gemini_Generated_Image_96zrc396zrc396zr.png" alt="Main Brunch Image">
+                <img src="./김치볶음밥.png" class="main-img" alt="Main Brunch Image">
             </div>
         </div>
 
         <ul class="thumb">
+            <li><img src="./김치볶음밥.png" onclick="slider('./김치볶음밥.png')"></li>
+            <li><img src="./로제파스타.png" onclick="slider('./로제파스타.png')"></li>
+            <li><img src="./피쉬앤칩스.png" onclick="slider('./피쉬앤칩스.png')"></li>
+            <li><img src="./솔티드 캬라멜 빙수.png" onclick="slider('./솔티드 캬라멜 빙수.png')"></li>
             <li>
                 <a href="https://www.instagram.com/tulear_seoul/" target="_blank">
-                <img src="./누끼딴 인스타.png" alt="Thumbnail 1">
+                    <img src="./누끼딴 인스타.png" alt="Instagram">
                 </a>
             </li>
-
             <li>
-                <a href="https://www.facebook.com/contedetulear/?locale=ko_KR" target="_blank">
-                <img src="./누끼딴 페북.png" alt="Thumbnail 2">
+                <a href="https://www.facebook.com/contedetulear/" target="_blank">
+                    <img src="./누끼딴 페북.png" alt="Facebook">
                 </a>
             </li>
         </ul>
-
-        
     </section>
 
+    <script>
+        function slider(path) {
+            document.querySelector('.main-img').src = path;
+        }
+    </script>
 </body>
 </html>
 
